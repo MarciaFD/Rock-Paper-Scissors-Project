@@ -14,5 +14,16 @@ header {
 header h1{
     color: #24272E;
     text-align: center;
-    font-family: Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.score-board {
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid white;
+    border-radius: 4px;
+    width: 200px;
+    font-size: 45px;
+    padding: 15px 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
