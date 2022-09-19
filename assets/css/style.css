@@ -11,7 +11,7 @@ header {
     padding: 20px;
 }
 
-header h1{
+header h1 {
     color: #24272E;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -26,4 +26,36 @@ header h1{
     font-size: 45px;
     padding: 15px 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: darkolivegreen;
+    position: relative;
+    
+}
+
+.badge {
+    background:darkolivegreen;
+    color: white;
+    font-size: 14px;
+    padding: 2px 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#user-label {
+    position: absolute;
+    top: 30px;
+    left: -35px;
+}
+
+#computer-label {
+    position: absolute;
+    top: 30px;
+    left: 180px;
+}
+
+.result {
+    font-size: 40px;
+    color: white;
+}
+
+.result > h1 {
+    text-align: center;
 }
