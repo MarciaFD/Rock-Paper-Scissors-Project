@@ -14,10 +14,35 @@ function getComputerChoice() {
     return choices[randomNumber];    
 }
 
-/*function game(userChoice) {
+ function game(userChoice) {
     const computerChoice = getComputerChoice();
-    console.log(computerChoice);
-} */ parei aqui!!!!!
+    switch(userChoice + computerChoice) {
+        case "rockscissors":
+        case "paperrock":
+        case "scissorspaper":
+            win();
+            break;
+       case "rockpaper":
+       case "paperscissors":
+       case "scissorsrock":
+
+            break;
+       case "rockrock":
+       case "paperpaper":
+       case "scissorscissors":
+            console.log("Its a draw");
+            break;
+
+
+        
+        
+
+        
+        
+
+    }
+    
+
 
 
 
