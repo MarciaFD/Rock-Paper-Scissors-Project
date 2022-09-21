@@ -1,8 +1,8 @@
-const userScore = 0;
-const computerScore = 0;
+let userScore = 0;
+let computerScore = 0;
 const userScore_span = document.getElementById("user-score");
 const computerScore_span = document.getElementById("user-score");
-const scoreBoard_div = document.querySelector(".score-board");
+const scoreBoard_p = document.querySelector(".result > p");
 const result_div = document.querySelector(".result");
 const rock_div = document.getElementById("rock");
 const paper_div = document.getElementById("paper");
@@ -17,6 +17,26 @@ function getComputerChoice() {
     return choices[randomNumber];    
 }
 
+function convertToWord(letter) {
+    if (letter === "rock") return "Rock";
+    if (letter === "paper") return "Paper";
+    return "Scissors";
+}
+
+/* Win and lose functions */
+
+function win(user, computer) {
+    userScore++;
+    userScore_span.innerHTML = userScore;
+    computerScore_span = computerScore;
+    result_div.innerHTML = userChoice + "beats" + computerChoice + ".You win!";
+
+}
+
+function lose() {
+
+}
+
 /*Convertcase */
 
 function convertCase(anythingIwant) {
@@ -29,9 +49,6 @@ function convertCase(anythingIwant) {
 
  function game(userChoice) {
     const computerChoice = getComputerChoice();
-    console.log ("Game function:user choice is="+userChoice);
-    console.log("Game function: computer choiceis="+computerChoice);
-
     switch(userChoice + computerChoice) {
         case "scissorpaper":
         case "rockscissors":
@@ -69,4 +86,3 @@ function main() {
     })  
 }
 
-main();
