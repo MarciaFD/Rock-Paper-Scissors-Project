@@ -23,18 +23,33 @@ function convertToWord(letter) {
     return "Scissors";
 }
 
-/* Win and lose functions */
+/* Win condition */
 
-function win(user, computer) {
+function win(userChoice, computerChoice) {
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span = computerScore;
-    result_div.innerHTML = userChoice + "beats" + computerChoice + ".You win!";
+    const smallUserWord = "user".fontsize(3);
+    const smallUserWord = "comp".fontsize(3);
+    result_p.innerHTML = ""
+    console.log(user);
+    console.log(computer);
 
 }
 
-function lose() {
+/* Lose condition */ **************
+function lose(user, computer) {
+    computerScore++;
+    computerScore_span.innerHTML = computerScore;
+    const userName = "(user)".fontsize(3).sup();
+    const compName = "(comp)".fontsize(3).sup();
+    result_div.innerHTML = `<p>${convertCase(computer)}${compName} beats ${convertCase(user)}${userName}. You lose!</p>`;
+    const roundStatus = document.getElementById(user);
+    roundStatus.classList.add('losingStyles');
+}
 
+function draw() {
+    console.log("Draw!!")
 }
 
 /*Convertcase */
@@ -85,4 +100,3 @@ function main() {
         game("scissors");        
     })  
 }
-
