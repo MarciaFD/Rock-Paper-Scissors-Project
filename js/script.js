@@ -3,20 +3,93 @@ let computerScore = 0;
 const userScore_span = document.getElementById("user-score");
 const computerScore_span = document.getElementById("computer-score");
 const scoreBoard_div = document.querySelector(".score-board");
-const scoreBoard_p = document.querySelector(".result > p");*************
-const result_div = document.querySelector(".result");
+const result_p = document.querySelector(".result >p");
 const rock_div = document.getElementById("rock");
 const paper_div = document.getElementById("paper");
 const scissors_div = document.getElementById("scissors");
 
 
-/* Function game */
+
+/* Core Computer function*/
+
+function getComputerChoice() {
+    const choices = ["rock", "paper", "scissors"];
+    const randomNumber = Math.floor(Math.random()*3);
+    return choices[randomNumber];    
+}
+
+/*************** check switch documentation***********
+
+***************************************************** */
+
+/* Core function game */
 
 function game(userChoice) {
-    PUT FUCNTION getComputerChoice HeRE
+    const computerChoice = getComputerChoice();
+    switch(userChoice + computerChoice) {
+      case "rockscissors":
+      case "paperrock":
+      case "scissorspaper":    
+        win();        
+         break;
+      case "rockpaper":
+      case "paperscissors":
+      case "scissorsrock":
+        lose();
+         break;
+      case "rockrock":
+      case "paperpaper":
+      case "scissorscissors":
+         draw();
+        break;               
+    }
+}
+
+
+
+function convertToWord(letter) {
+    if (letter === "rock") return "Rock";
+    if (letter === "paper") return "Paper";
+    return "Scissors";
+}
+
+/* Win condition  put acima de core function game*/
+
+function win(userChoice, computerChoice) {
+    userScore++;
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = computerScore;
+    const smallUserWord = "user".fontsize(3).sub();
+    const smallCompWord = "comp".fontsize(3).sub();
+    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}. You win!`;
+   }
+
+
+/* Lose condition */ **************
+
+function lose(userChoice, computerChoice) {
+    computerScore++;
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = computerScore;
+    const smallUserWord = "user".fontsize(3).sub();
+    const smallCompWord = "comp".fontsize(3).sub();
+    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} loses to ${convertToWord(computerChoice)}. You lose!`;     
+}
+
+function draw(userChoice, computerChoice) {
+    const smallUserWord = "user".fontsize(3).sub();
+    const smallCompWord = "comp".fontsize(3).sub();
+    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} equals ${convertToWord(computerChoice)}. You draw!`;
 
 }
 
+/*Convertcase */
+
+function convertCase(anythingIwant) {
+    if(anythingIwant ==="paper") return "Paper";
+    if(anythingIwant ==="scissors") return "Scissors";
+    return "Rock";
+}
 
 /* Event listener */
 
@@ -35,87 +108,4 @@ paper_div.addEventListener("click", function() {
 scissors_div.addEventListener("click", function() {
     console.log("you clicked on scissors");
 })
-}
-
-
-/* Core Computer function*/
-
-function getComputerChoice() {
-    const choices = ["rock", "paper", "scissors"];
-    const randomNumber = Math.floor(Math.random()*3);
-    return choices[randomNumber];    
-}
-
-function game(userChoice) {
-    const computerChoice = getComputerChoice();
-}
-
-
-function convertToWord(letter) {
-    if (letter === "rock") return "Rock";
-    if (letter === "paper") return "Paper";
-    return "Scissors";
-}
-
-/* Win condition */
-
-function win(userChoice, computerChoice) {
-    userScore++;
-    userScore_span.innerHTML = userScore;
-    computerScore_span = computerScore;
-    const smallUserWord = "user".fontsize(3);
-    const smallUserWord = "comp".fontsize(3);
-    result_p.innerHTML = ""
-    console.log(user);
-    console.log(computer);
-
-}
-
-/* Lose condition */ **************
-function lose(user, computer) {
-    computerScore++;
-    computerScore_span.innerHTML = computerScore;
-    const userName = "(user)".fontsize(3).sup();
-    const compName = "(comp)".fontsize(3).sup();
-    result_div.innerHTML = `<p>${convertCase(computer)}${compName} beats ${convertCase(user)}${userName}. You lose!</p>`;
-    const roundStatus = document.getElementById(user);
-    roundStatus.classList.add('losingStyles');
-}
-
-function draw() {
-    console.log("Draw!!")
-}
-
-/*Convertcase */
-
-function convertCase(anythingIwant) {
-    if(anythingIwant ==="paper") return "Paper";
-    if(anythingIwant ==="scissors") return "Scissors";
-    return "Rock";
-}
-
-/* Core Game */
-
- function game(userChoice) {
-    const computerChoice = getComputerChoice();
-    switch(userChoice + computerChoice) {
-        case "scissorpaper":
-        case "rockscissors":
-        case "paperrock":
-        win(userChoice,computerChoice);
-        console.log("user wins");
-        
-        break;
-       case "rockpaper":
-       case "paperscissors":
-       case "scissorsrock":
-        console.log("user losescomputer wins");
-
-            break;
-       case "rockrock":
-       case "paperpaper":
-       case "scissorscissors":
-            console.log("Its a draw");
-            break;               
-    }
 }

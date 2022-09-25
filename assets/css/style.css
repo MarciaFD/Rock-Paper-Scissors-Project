@@ -18,6 +18,7 @@ header {
 header > h1 {
     
     color:lightblue;
+    font-weight: bold;
     text-align: center;
    
 }
