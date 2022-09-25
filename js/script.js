@@ -1,21 +1,55 @@
 let userScore = 0;
 let computerScore = 0;
 const userScore_span = document.getElementById("user-score");
-const computerScore_span = document.getElementById("user-score");
-const scoreBoard_p = document.querySelector(".result > p");
+const computerScore_span = document.getElementById("computer-score");
+const scoreBoard_div = document.querySelector(".score-board");
+const scoreBoard_p = document.querySelector(".result > p");*************
 const result_div = document.querySelector(".result");
 const rock_div = document.getElementById("rock");
 const paper_div = document.getElementById("paper");
 const scissors_div = document.getElementById("scissors");
 
 
+/* Function game */
+
+function game(userChoice) {
+    PUT FUCNTION getComputerChoice HeRE
+
+}
+
+
+/* Event listener */
+
+main ();
+
+function main() {
+
+rock_div.addEventListener("click", function() {
+    console.log("you clicked on rock");
+})
+
+paper_div.addEventListener("click", function() {
+    console.log("you clicked on paper");
+})
+
+scissors_div.addEventListener("click", function() {
+    console.log("you clicked on scissors");
+})
+}
+
+
 /* Core Computer function*/
 
 function getComputerChoice() {
     const choices = ["rock", "paper", "scissors"];
-    const randomNumber = Math.floor(Math.random()*3)
+    const randomNumber = Math.floor(Math.random()*3);
     return choices[randomNumber];    
 }
+
+function game(userChoice) {
+    const computerChoice = getComputerChoice();
+}
+
 
 function convertToWord(letter) {
     if (letter === "rock") return "Rock";
@@ -82,21 +116,6 @@ function convertCase(anythingIwant) {
        case "paperpaper":
        case "scissorscissors":
             console.log("Its a draw");
-            break;  
-             
-  }
-   
-
-function main() {
-    rock_div.addEventListener("click", function() {
-        game("rock");        
-    })
-    
-    paper_div.addEventListener("click", function() {
-        game("paper");      
-    })
-    
-    scissors_div.addEventListener("click", function() {
-        game("scissors");        
-    })  
+            break;               
+    }
 }
