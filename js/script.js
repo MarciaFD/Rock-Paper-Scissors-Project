@@ -1,114 +1,74 @@
-let userScore = 0;
-let computerScore = 0;
-const userScore_span = document.getElementById("user-score");
-const computerScore_span = document.getElementById("computer-score");
-const scoreBoard_div = document.querySelector(".score-board");
-const result_p = document.querySelector(".result >p");
-const rock_div = document.getElementById("rock");
-const paper_div = document.getElementById("paper");
-const scissors_div = document.getElementById("scissors");
+var playerChoice = 0;
+var playerPontuacao = 0;
+var computerChoice = 0;
+var computerPontuacao = 0;
+var winner = -1;
 
+function play(choice) {
+    playerChoice = choice;            
+    computerChoice = Math.floor((Math.random () * (3 - 1 + 1))) + 1;
 
+// 1 - Rock
+// 2 - Paper
+// 3 - Scissor
 
-/* Core Computer function*/
-
-function getComputerChoice() {
-    const choices = ["rock", "paper", "scissors"];
-    const randomNumber = Math.floor(Math.random()*3);
-    return choices[randomNumber];    
+if((playerChoice == 1) && (computerChoice == 1)){
+    winner = 0;
+}              
+else if((playerChoice == 1) && (computerChoice == 2)){
+    winner = 2;
+    computerPontuacao++;
 }
-
-/*************** check switch documentation***********
-
-***************************************************** */
-
-/* Core function game */
-
-function game(userChoice) {
-    const computerChoice = getComputerChoice();
-    switch(userChoice + computerChoice) {
-      case "rockscissors":
-      case "paperrock":
-      case "scissorspaper":    
-        win();        
-         break;
-      case "rockpaper":
-      case "paperscissors":
-      case "scissorsrock":
-        lose();
-         break;
-      case "rockrock":
-      case "paperpaper":
-      case "scissorscissors":
-         draw();
-        break;               
-    }
+else if((playerChoice == 1) && (computerChoice == 3)){
+    winner = 1;
+    playerPontuacao++;
 }
-
-
-
-function convertToWord(letter) {
-    if (letter === "rock") return "Rock";
-    if (letter === "paper") return "Paper";
-    return "Scissors";
+else if((playerChoice == 2) && (computerChoice == 1)){
+    winner == 1;
+    playerPontuacao++;
 }
-
-/* Win condition  put acima de core function game*/
-
-function win(userChoice, computerChoice) {
-    userScore++;
-    userScore_span.innerHTML = userScore;
-    computerScore_span.innerHTML = computerScore;
-    const smallUserWord = "user".fontsize(3).sub();
-    const smallCompWord = "comp".fontsize(3).sub();
-    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}. You Win!`;
-   }
-
-
-/* Lose condition */ **************
-
-function lose(userChoice, computerChoice) {
-    computerScore++;
-    userScore_span.innerHTML = userScore;
-    computerScore_span.innerHTML = computerScore;
-    const smallUserWord = "user".fontsize(3).sub();
-    const smallCompWord = "comp".fontsize(3).sub();
-    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} loses to ${convertToWord(computerChoice)}. You Lost!`;  
-    userChoice.classList.add("red-glow"); 
-    setTimeout(function() {
-        userChoice.classList.remove("red-glow");},300);  
+else if((playerChoice == 2) && (computerChoice == 2)){
+    winner = 0;
 }
-
-function draw(userChoice, computerChoice) {
-    const smallUserWord = "user".fontsize(3).sub();
-    const smallCompWord = "comp".fontsize(3).sub();
-    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} equals ${convertToWord(computerChoice)}. It is a draw!`;
+else if((playerChoice == 2) && (computerChoice == 3)){
+    winner = 2;
+    computerPontuacao++;
+}
+else if((playerChoice == 3) && (computerChoice == 1)){
+    winner == 2;
+    computerPontuacao++;
+}
+else if((playerChoice == 3) && (computerChoice == 2)){
+    winner = 1;
+    playerPontuacao++;
+}
+else if((playerChoice == 3) && (computerChoice == 3)){
+    winner = 0;
 
 }
 
-/*Convertcase */
+document.getElementById("player-choice-1").classList.remove("selected");
+document.getElementById("player-choice-2").classList.remove("selected");
+document.getElementById("player-choice-3").classList.remove("selected");
+document.getElementById("computer-choice-1").classList.remove("selected");
+document.getElementById("computer-choice-2").classList.remove("selected");
+document.getElementById("computer-choice-3").classList.remove("selected");
 
-function convertCase(anythingIwant) {
-    if(anythingIwant ==="paper") return "Paper";
-    if(anythingIwant ==="scissors") return "Scissors";
-    return "Rock";
+document.getElementById("player-choice-"+ playerChoice).classList.add("selected");
+document.getElementById("computer-choice-" + computerChoice).classList.add("selected");
+
+if(winner == 0){
+    document.getElementById("messages").innerHTML = "Draw";
+}
+else if(winner == 1){
+    document.getElementById("messages").innerHTML = "Player wins";
+}
+else if(winner == 2){
+    document.getElementById("messages").innerHTML = "Computer wins";
 }
 
-/* Event listener */
 
-main ();
+document.getElementById("player-score").innerHTML = playerPontuacao;
+document.getElementById("computer-score").innerHTML = computerPontuacao;
 
-function main() {
-
-rock_div.addEventListener("click", function() {
-    console.log("you clicked on rock");
-})
-
-paper_div.addEventListener("click", function() {
-    console.log("you clicked on paper");
-})
-
-scissors_div.addEventListener("click", function() {
-    console.log("you clicked on scissors");
-})
 }

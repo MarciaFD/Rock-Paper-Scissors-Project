@@ -11,34 +11,39 @@
 </head>
 <body>
     <header>
-        <h1>Rock Paper Scissors</h1>     
+        <h1>Rock Paper Scissors</h1>
     </header>
-
-    <div class="score-board">
-        <div id="user-label" class="badge">user</div>
-        <div id="computer-label" class="badge">comp</div>
-        <span id="user-score">0</span>:<span id="computer-score">0</span>
-    </div>
-
-    <div class="result">
-        <p>Paper covers rock. You win!</p>
-    </div>
-
-    <div class="choices">
-        <div class="choice" id="rock">
-            <img src="assets/images/icon-rock.svg" alt="icon-rock">
-        </div>
+    <div id="principal">
         
-        <div class="choice" id="paper">
-            <img src="assets/images/icon-paper.svg" alt="icon-paper">
+    <div id="score-game"> 
+        <div id="player">
+            <h2 id="player-name">User</h2>
+            <span id="player-score">0</span>
+
+            <ul id="player-choice">
+                <li><a id="player-choice-1" onclick="play(1)"><img src="/assets/images/rock.png" alt=""></a></li>
+                <li><a id="player-choice-2" onclick="play(2)"><img src="/assets/images/paper.png" alt=""></a></li>
+                <li><a id="player-choice-3" onclick="play(3)"><img src="/assets/images/scissors.png" alt=""></a></li>
+            </ul>
+        </div>    
+
+        <div id="versus">vs</div>
+        
+        <div id="computer">
+            <h2 id="computer-name">Computer</h2>
+            <span id="computer-score">0</span>
+
+            <ul id="computer-choice">
+                <li><a id="computer-choice-1"><img src="/assets/images/rock.png" alt=""></a></li>
+                <li><a id="computer-choice-2"><img src="/assets/images/paper.png" alt=""></a></li>
+                <li><a id="computer-choice-3"><img src="/assets/images/scissors.png" alt=""></a></li>
+            </ul>
+        </div>   
         </div>
 
-        <div class="choice" id="scissors">
-            <img src="assets/images/icon-scissors.svg" alt="icon-scissors">
-        </div>
+        <div id="messages">&nbsp;</div>
+    </div>        
     </div>
-
-    <p id="message-action">Make your move.</p>
 
     <script src="./js/script.js"></script>
 
