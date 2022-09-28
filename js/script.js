@@ -1,8 +1,8 @@
-var playerChoice = 0;
-var playerPontuacao = 0;
-var computerChoice = 0;
-var computerPontuacao = 0;
-var winner = -1;
+let playerChoice = 0;
+let playerPontuacao = 0;
+let computerChoice = 0;
+let computerPontuacao = 0;
+let winner = -1;
 
 function play(choice) {
     playerChoice = choice;            
