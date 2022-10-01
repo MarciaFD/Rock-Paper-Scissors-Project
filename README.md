@@ -1,11 +1,10 @@
 # Rock, Paper, Scissors
 - The aim of this project is to build a Rock, Paper, Scissors game that helped me improve my coding skills through the construction of this project.
 
-![](assets/images/2022-10-01.png)
 
 ## Table of contents
 - Overview
-- The project
+- Color Scheme
 - Rules
 - Screenshot
 - Main Technologies
@@ -15,19 +14,11 @@
 Note: Delete this note and update the table of contents based on what sections you keep.
 
 
-- Testing 
-
-
 
 
 ### Validator Testing 
 
-
-
 ## Deployment
-
-
-
 
 ## Credits 
 
@@ -39,7 +30,13 @@ In this game, Users should be able to:
 - View the best layout for the game based on the screen size of their device.
 - Play Rock, Paper, Scissors against the computer.
 - See the state of the score and the results.
+![](assets/images/2022-10-01.png)
 
+
+### Color Scheme
+
+- Coolors.co was used to choose the colour scheme of the game.
+![Color Scheme](assets/images/2022-10-01%20(8).png)
 ### Rules
 
 
@@ -58,6 +55,9 @@ In this game, Users should be able to:
 
 ### Screenshot
 
+- Game Image Area
+  - The game image are lets the user know if he/she is winning or losing.
+
 ![Player Wins](assets/images/2022-10-01%20(5).png)
 
 
@@ -69,12 +69,19 @@ In this game, Users should be able to:
 ![Draw](assets/images/2022-10-01%20(3).png)
 
 
+### Scoreboard
+ - The scoreboard displays the progress of the game and shows the score of the user and computer.
+ ![Scoreboard](assets/images/2022-10-01%20(7).png)
 
 
 ### Main Technologies
 
-This project it has been built using  Semantic HTML5 markup, CSS custom properties and  JavaScript technologies learned in The Learning Management System (LMS) by Code Institute.
+This project it has been built using the following list of technologies learned in The Learning Management System(LMS) by Code Institute:
 
+- Semantic HTML5 used to create the structure of the site.
+- CSS custom properties used to add style to the site.
+- JavaScript technologies used to add functionalities to the game.
+- GitHub was used to store the code of the project.
 ### Useful Resources
 
   Built with help [YouTube tutorials]:
@@ -90,7 +97,6 @@ freeCodeCamp.org
 
 
 
-### Useful Resources
 
 ### Testing 
 
