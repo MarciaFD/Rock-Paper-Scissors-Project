@@ -8,9 +8,7 @@
 - The project
 - Rules
 - Screenshot
-- My process
-- Built with
-- Continued development
+- Main Technologies
 - Useful resources
 - Author
 - Acknowledgments
@@ -76,6 +74,8 @@ In this game, Users should be able to:
 ### Main Technologies
 
 This project it has been built using  Semantic HTML5 markup, CSS custom properties and  JavaScript technologies learned in The Learning Management System (LMS) by Code Institute.
+
+### Useful Resources
 
   Built with help [YouTube tutorials]:
 
