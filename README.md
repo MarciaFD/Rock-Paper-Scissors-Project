@@ -3,32 +3,29 @@
 
 
 ## Table of contents
-- Overview
+- UX & Design
 - Color Scheme
 - Rules
 - Screenshot
 - Main Technologies
-- Useful resources
+- Useful Resources
+- Validator Testing
+- Unfixed Bugs
+- Deployment
+- Credits
 - Author
 - Acknowledgments
 Note: Delete this note and update the table of contents based on what sections you keep.
 
 
 
-
-### Validator Testing 
-
-## Deployment
-
-## Credits 
-
-
-### Overview
+### UX & Design
  
-In this game, Users should be able to:
+The game is a single-serving site with an only one page. In this game, Users should be able to:
 
 - View the best layout for the game based on the screen size of their device.
 - Play Rock, Paper, Scissors against the computer.
+- See the site name at the top of the page.
 - See the state of the score and the results.
 ![](assets/images/2022-10-01.png)
 
@@ -96,14 +93,15 @@ Web Development Tutorial - JavaScript, HTML, CSS - Rock Paper Scissors Game  -
 freeCodeCamp.org
 
 
-
-
-### Testing 
-
-
-
-
 ### Validator Testing 
+
+- HTML
+  - No errors or warning were returned throughout the official:  https://validator.w3.org
+![HTML Checker](assets/images/2022-10-01%20(9).png)
+
+- CSS
+  - No errors or warnings were returned throught the official W3C CSS Validation Service: https://jigsaw.w3.org/css-validator/
+![CSS Validation Service](assets/images/2022-10-01%20(10).png)
 
 
 
@@ -113,6 +111,11 @@ freeCodeCamp.org
 
 
 ### Deployment
+
+- The website was uploaded to pages on GitHub. The following are the deployment steps:
+  - Go to the Settings tab in the GitHub repository.
+  - Click "Save" after selecting the Main Branch from the drop-sown menu for the source section.
+  - A detailed ribbon display will be displayed to indicate the successful deployment after the page is refreshed automatically.
 
 
 
