@@ -79,18 +79,17 @@ This project it has been built using the following list of technologies learned 
 - CSS custom properties used to add style to the site.
 - JavaScript technologies used to add functionalities to the game.
 - GitHub was used to store the code of the project.
+
 ### Useful Resources
 
   Built with help [YouTube tutorials]:
 
  - https://www.youtube.com/playlist?list=WL
-Como criar um Jogo Pedra, Papel e Tesoura em HTML, CSS e JavaScript - 
-Felipe - Dev Samurai
+Como criar um Jogo Pedra, Papel e Tesoura em HTML, CSS e JavaScript - Felipe - Dev Samurai
 
 
 - https://www.youtube.com/watch?v=jaVNP3nIAv0&list=WL&index=5&ab_channel=freeCodeCamp.org
-Web Development Tutorial - JavaScript, HTML, CSS - Rock Paper Scissors Game  - 
-freeCodeCamp.org
+Web Development Tutorial - JavaScript, HTML, CSS - Rock Paper Scissors Game  - freeCodeCamp.org
 
 
 ### Validator Testing 
@@ -108,6 +107,9 @@ freeCodeCamp.org
 
 ### Unfixed Bugs
 
+- JS Hint
+
+![JS Hint](assets/images/2022-10-03.png)
 
 
 ### Deployment
@@ -118,64 +120,24 @@ freeCodeCamp.org
   - A detailed ribbon display will be displayed to indicate the successful deployment after the page is refreshed automatically.
 
 
-
-
-### Credits 
-
-### Features Left to Implement
-
-
-
-
-## Testing 
-
-
-
-
-### Validator Testing 
-
-
-
-### Unfixed Bugs
-
-
-
-
-
-
-
-
-
-
-
-Styled Components - For styles
-Note: These are just examples. Delete this note and replace the list above with your own choices
-
-What I learned
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-
-
-Continued development
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-Note: Delete this note and the content within this section and replace with your own plans for continued development.
-
-Useful resources
-Example resource 1 - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-Example resource 2 - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.
-
 Author
 Website - Add your name here
 Frontend Mentor - @yourusername
 Twitter - @yourusername
 Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.
 
-Acknowledgments
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+### Acknowledgments
 
-Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.
+- This project was made with the inspiration from  Youtube tutorials, especially from Felipe Dev Samurai's solution: 
+
+   - https://www.youtube.com/playlist?list=WL
+    Como criar um Jogo Pedra, Papel e Tesoura em HTML, CSS e JavaScript - Felipe - Dev Samurai
+
+
+   - https://www.youtube.com/watch?v=jaVNP3nIAv0&list=WL&index=5&ab_channel=freeCodeCamp.org
+   Web Development Tutorial - JavaScript, HTML, CSS - Rock Paper Scissors Game  - freeCodeCamp.org
+
+
 
 
  
