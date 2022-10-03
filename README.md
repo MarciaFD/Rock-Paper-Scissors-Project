@@ -29,7 +29,8 @@ The game is a single-serving site with an only one page. In this game, Users sho
 ## Color Scheme
 
 - Coolors.co was used to choose the colour scheme of the game.
-![Color Scheme](assets/images/2022-10-01%20(8).png)
+
+![](assets/images/2022-10-01%20(8).png)
 
 ## Rules
 
